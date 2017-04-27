@@ -9,4 +9,6 @@ interface WashletState {
     WashletState toStop();
 
     void action();
+
+    void move();
 }

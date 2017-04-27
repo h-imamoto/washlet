@@ -1,6 +1,9 @@
 package washlet;
 
 public class Oshiri implements WashletState{
+
+    private MoveStatus moveStatus = MoveStatus.OFF;
+
     @Override
     public WashletState toBide() {
         Bide bide = new Bide();
@@ -24,5 +27,16 @@ public class Oshiri implements WashletState{
     @Override
     public void action() {
         System.out.println("おしりプシュー");
+    }
+
+    @Override
+    public void move() {
+        moveStatus = moveStatus.toggle();
+
+        if (moveStatus.equals(MoveStatus.ON)) {
+            System.out.println("ムーブON");
+        } else {
+            System.out.println("ムーブOFF");
+        }
     }
 }

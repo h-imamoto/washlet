@@ -25,4 +25,9 @@ public class Stop implements WashletState{
     public void action() {
         System.out.println("ピタッ");
     }
+
+    @Override
+    public void move() {
+
+    }
 }

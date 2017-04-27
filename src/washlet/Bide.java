@@ -28,4 +28,9 @@ public class Bide implements WashletState{
     public void action() {
         System.out.println("ビデプシュー");
     }
+
+    @Override
+    public void move() {
+
+    }
 }

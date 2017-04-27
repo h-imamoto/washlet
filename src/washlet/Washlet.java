@@ -27,10 +27,14 @@ public class Washlet {
     }
 
     void とめる() {
-        washletState.toStop();
+        washletState = washletState.toStop();
     }
 
     void 立つ() {
         useStatus = 座ってない;
+    }
+
+    void ムーブ() {
+        washletState.move();
     }
 }
